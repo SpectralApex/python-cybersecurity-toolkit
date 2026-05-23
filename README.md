@@ -1,97 +1,140 @@
-# Python Port Scanner Suite
+# 🛡 Python Cybersecurity Toolkit
 
-A professional cybersecurity-focused Python port scanner collection built for learning, network enumeration, and portfolio demonstration.
+A modular cybersecurity toolkit focused on reconnaissance, automation, enumeration, and offensive security workflows.
 
 ---
 
-## Features
+# 🚀 Features
 
-### Basic Scanner
-- TCP port scanning
-- Beginner-friendly code structure
-- Fast common-port enumeration
-- Colored terminal output
-- Clean CLI interaction
+## 🔎 Multi-Threaded Reconnaissance Framework
 
-### Advanced Scanner
 - Multi-threaded scanning
 - Banner grabbing
-- Service detection
-- Custom port ranges
-- Timeout handling
-- Logging support
-- Professional CLI arguments
+- Service fingerprinting
+- Retry handling
+- Timeout management
+- Host discovery
+- JSON reporting
+- CSV export support
+- Structured logging
+- CLI arguments
+- DNS enumeration
+- HTTP fingerprinting
 
 ---
 
-## Project Structure
+# 📂 Project Structure
 
-```bash
-python-port-scanner-suite/
+```text
+python-cybersecurity-toolkit/
 │
-├── basic_scanner.py
-├── advanced_scanner.py
-├── requirements.txt
-├── LICENSE
-├── .gitignore
-├── README.md
-│
+├── scanner/
+├── recon/
+├── sniffer/
+├── analyzer/
+├── reports/
 ├── logs/
-├── scanner_results/
-└── assets/
+├── screenshots/
+├── examples/
+├── requirements.txt
+└── main.py
 ```
 
 ---
 
-## Installation
+# ⚙️ Modules
+
+## 🔴 Scanner Module
+
+- TCP scanning
+- Multi-threaded enumeration
+- Banner grabbing
+- Service fingerprinting
+- Port analysis
+- Timeout handling
+- Structured logging
+
+## 🌐 Recon Module
+
+- Subdomain enumeration
+- DNS analysis
+- HTTP fingerprinting
+- Header analysis
+- robots.txt parsing
+- SSL/TLS information gathering
+
+## 📡 Sniffer Module
+
+- Packet capture
+- Protocol filtering
+- Traffic monitoring
+- PCAP export
+- Suspicious traffic analysis
+
+## 📊 Analyzer Module
+
+- Log analysis
+- Failed login detection
+- Regex rule matching
+- Threat indicator identification
+- Event parsing
+
+---
+
+# 🧠 Example Usage
 
 ```bash
-git clone https://github.com/SpectralApex/python-port-scanner-suite.git
-cd python-port-scanner-suite
-pip install -r requirements.txt
+python main.py --target 192.168.1.10 --threads 100 --timeout 3
 ```
 
 ---
 
-## Usage
+# 📊 Reporting
 
-### Basic Scanner
+Supported export formats:
 
-```bash
-python basic_scanner.py
-```
-
-### Advanced Scanner
-
-```bash
-python advanced_scanner.py -t 192.168.1.1 -s 1 -e 1000
-```
+- JSON
+- CSV
+- Markdown
 
 ---
 
-## Educational Use Disclaimer
-
-This project is intended strictly for:
-- cybersecurity learning
-- lab environments
-- authorized security testing
-- network administration
-
-Do not scan systems without proper authorization.
-
----
-
-## Skills Demonstrated
+# 🔥 Skills Demonstrated
 
 - Python Networking
 - Socket Programming
 - Multithreading
-- Enumeration Techniques
+- Enumeration Methodology
+- Offensive Security Automation
+- Structured Logging
 - CLI Tool Development
-- Cybersecurity Fundamentals
+- Reconnaissance Workflows
 
 ---
 
-## Author
+# ⚠️ Disclaimer
+
+This project is intended strictly for:
+
+- cybersecurity learning
+- lab environments
+- authorized security testing
+- educational research
+
+Do not scan systems without authorization.
+
+---
+
+# 🚀 Future Goals
+
+- AI-assisted reconnaissance
+- Automated reporting
+- Workflow orchestration
+- Vulnerability analysis
+- Detection engineering integration
+
+---
+
+# 👨‍💻 Author
 
 Created by SpectralApex
