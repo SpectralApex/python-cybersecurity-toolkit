@@ -1,0 +1,10 @@
+scan:
+  timeout: 2
+  threads: 100
+
+logging:
+  enabled: true
+  log_directory: logs/
+
+export:
+  format: json
