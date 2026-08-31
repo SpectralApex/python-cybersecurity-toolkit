@@ -1,140 +1,41 @@
-# 🛡 Python Cybersecurity Toolkit
+# Python Cybersecurity Toolkit
 
-A modular cybersecurity toolkit focused on reconnaissance, automation, enumeration, and offensive security workflows.
+A developing **defensive security-engineering** portfolio built with Python. The project improves existing utilities incrementally and turns them into tested, documented components for authorized labs and local analysis.
 
----
+## Current capability: authentication-log analysis
 
-# 🚀 Features
+`log-analyzer/log_analyzer.py` analyzes local SSH authentication logs. It:
 
-## 🔎 Multi-Threaded Reconnaissance Framework
+- identifies failed SSH login events;
+- normalizes usernames and valid source IP addresses;
+- summarizes source and username counts;
+- matches source IPs against a user-supplied, local IOC file; and
+- produces human-readable or JSON output suitable for downstream automation.
 
-- Multi-threaded scanning
-- Banner grabbing
-- Service fingerprinting
-- Retry handling
-- Timeout management
-- Host discovery
-- JSON reporting
-- CSV export support
-- Structured logging
-- CLI arguments
-- DNS enumeration
-- HTTP fingerprinting
-
----
-
-# 📂 Project Structure
-
-```text
-python-cybersecurity-toolkit/
-│
-├── scanner/
-├── recon/
-├── sniffer/
-├── analyzer/
-├── reports/
-├── logs/
-├── screenshots/
-├── examples/
-├── requirements.txt
-└── main.py
-```
-
----
-
-# ⚙️ Modules
-
-## 🔴 Scanner Module
-
-- TCP scanning
-- Multi-threaded enumeration
-- Banner grabbing
-- Service fingerprinting
-- Port analysis
-- Timeout handling
-- Structured logging
-
-## 🌐 Recon Module
-
-- Subdomain enumeration
-- DNS analysis
-- HTTP fingerprinting
-- Header analysis
-- robots.txt parsing
-- SSL/TLS information gathering
-
-## 📡 Sniffer Module
-
-- Packet capture
-- Protocol filtering
-- Traffic monitoring
-- PCAP export
-- Suspicious traffic analysis
-
-## 📊 Analyzer Module
-
-- Log analysis
-- Failed login detection
-- Regex rule matching
-- Threat indicator identification
-- Event parsing
-
----
-
-# 🧠 Example Usage
+Example, using only authorized local or lab data:
 
 ```bash
-python main.py --target 192.168.1.10 --threads 100 --timeout 3
+python log-analyzer/log_analyzer.py /var/log/auth.log --ioc-file iocs.txt --json
 ```
 
----
+The IOC file accepts one IP address per line. Empty lines, comments, and invalid values are ignored deliberately.
 
-# 📊 Reporting
+## Development
 
-Supported export formats:
+```bash
+python -m unittest discover -s tests -v
+ruff check .
+ruff format --check .
+```
 
-- JSON
-- CSV
-- Markdown
+## Portfolio direction
 
----
+The roadmap progresses from reliable Python detection utilities to integrated log analysis, file integrity monitoring, IOC matching, threat intelligence, incident response, Docker, CI/CD security, dashboards, and secure application development. See [roadmap.md](roadmap.md) for the active progression and [AGENTS.md](AGENTS.md) for the permanent operating contract.
 
-# 🔥 Skills Demonstrated
+## Safety and scope
 
-- Python Networking
-- Socket Programming
-- Multithreading
-- Enumeration Methodology
-- Offensive Security Automation
-- Structured Logging
-- CLI Tool Development
-- Reconnaissance Workflows
+This repository is for defensive security automation, education, and explicitly authorized labs. It must not be used for unauthorized access, destructive actions, credential theft, persistence, malware, or evasion.
 
----
+## Existing experiments
 
-# ⚠️ Disclaimer
-
-This project is intended strictly for:
-
-- cybersecurity learning
-- lab environments
-- authorized security testing
-- educational research
-
-Do not scan systems without authorization.
-
----
-
-# 🚀 Future Goals
-
-- AI-assisted reconnaissance
-- Automated reporting
-- Workflow orchestration
-- Vulnerability analysis
-- Detection engineering integration
-
----
-
-# 👨‍💻 Author
-
-Created by SpectralApex
+Existing DNS, packet, network-monitoring, and scanner experiments remain in place. Future work will harden and integrate the defensive components rather than discard useful work for cosmetic reasons.
